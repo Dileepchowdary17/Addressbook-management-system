@@ -24,7 +24,6 @@ AddressBook/
 ├── file.c
 ├── file.h
 ├── contacts.csv
-└── README.md
 ```
 
 ## Requirements

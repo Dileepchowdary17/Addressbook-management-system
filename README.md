@@ -43,7 +43,6 @@ AddressBook/
 | `file.c`       | Loading and saving contact data                                         |
 | `file.h`       | File handling function declarations                                     |
 | `contacts.csv` | Persistent contact data                                                 |
-| `README.md`    | Project documentation                                                   |
 
 ## Application Flow
 

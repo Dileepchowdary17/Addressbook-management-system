@@ -1,21 +1,22 @@
-AddressBook
+# AddressBook
 
-A menu-driven contact management application developed in C. AddressBook allows users to create, search, edit, delete, and list contacts, with persistent storage using a CSV file.
+A simple console-based contact management system written in **C**. It allows you to create, search, edit, delete, and list contacts, with data persisted to a CSV file.
 
-Features
+## Features
 
-* Create new contacts
-* Search contacts by name, phone, or email
-* Edit existing contacts
-* Delete contacts
-* List contacts alphabetically by name
-* Validate contact information
-* Prevent duplicate phone numbers and email addresses
-* Save contacts to a CSV file
-* Load saved contacts when the application starts
+* **Create Contact** — Add a new contact with name, phone, and email
+* **Search Contact** — Find contacts by name, phone, or email
+* **Edit Contact** — Update an existing contact's details
+* **Delete Contact** — Remove a contact from the address book
+* **List All Contacts** — View all saved contacts
+* **Save and Exit** — Save all contacts to `contacts.csv` before quitting
+* **Input Validation** — Validate name, phone number, and email
+* **Duplicate Checking** — Prevent duplicate phone numbers and email addresses
+* **Alphabetical Sorting** — Sort contacts by name
 
-Project Structure
+## Project Structure
 
+```text
 AddressBook/
 ├── main.c
 ├── contact.c
@@ -24,28 +25,29 @@ AddressBook/
 ├── file.h
 ├── contacts.csv
 └── README.md
+```
 
+## Requirements
 
-Requirements
-
-* C compiler (GCC recommended)
+* GCC or another C compiler
 * Linux, macOS, or Windows
-* Terminal
+* Terminal or Command Prompt
 
-File Description
+## File Description
 
-| File           | Description                                                                        |
-| -------------- | ---------------------------------------------------------------------------------- |
-|  main.c        | Handles program execution and menu operations                                      |
-|  contact.c     | Implements contact creation, searching, editing, deletion, validation, and listing |
-|  contact.h     | Defines contact structures and declares contact-related functions                  |
-|  file.c        | Implements saving and loading contacts                                             |
-|  file.h        | Declares file handling functions                                                   |
-|  contacts.csv  | Stores contact data for persistent storage                                         |
-|  README.md     | Project documentation                                                              |
+| File           | Description                                                             |
+| -------------- | ----------------------------------------------------------------------- |
+| `main.c`       | Program entry point and menu handling                                   |
+| `contact.c`    | Contact creation, searching, editing, deletion, validation, and listing |
+| `contact.h`    | Contact and AddressBook structures and function declarations            |
+| `file.c`       | Loading and saving contact data                                         |
+| `file.h`       | File handling function declarations                                     |
+| `contacts.csv` | Persistent contact data                                                 |
+| `README.md`    | Project documentation                                                   |
 
-Application Flow
+## Application Flow
 
+```text
 Start
   |
   v
@@ -71,60 +73,68 @@ Display Menu
   |
   v
 End
+```
 
-
-Compilation
+## Compilation
 
 Compile all source files using GCC:
 
+```bash
 gcc main.c contact.c file.c -o addressbook
+```
 
+## Execution
 
-Execution
+### Linux / macOS
 
-Linux / macOS
-
+```bash
 ./addressbook
+```
 
+### Windows
 
-Windows
-
+```bash
 addressbook.exe
+```
 
-Usage
+## Usage
 
-After starting the application, select an option from the menu:
+When the program starts, the following menu is displayed:
 
-***************************************
-|           ADDRESS BOOK MENU         |
----------------------------------------
-|   1   |   CREATE CONTACT            |
-|   2   |   SEARCH CONTACT            |
-|   3   |   EDIT CONTACT              |
-|   4   |   DELETE CONTACT            |
-|   5   |   LIST ALL CONTACTS         |
-|   6   |   SAVE AND EXIT             |
-|   7   |   EXIT                      |
----------------------------------------
-Choose your Option:
+```text
+*******************************************
+|            ADDRESS BOOK MENU            |
+-------------------------------------------
+|   1   |   CREATE CONTACT               |
+|   2   |   SEARCH CONTACT               |
+|   3   |   EDIT CONTACT                 |
+|   4   |   DELETE CONTACT               |
+|   5   |   LIST ALL CONTACTS            |
+|   6   |   SAVE AND EXIT                |
+|   7   |   EXIT                         |
+-------------------------------------------
+Enter your choice:
+```
 
-Enter the number wants to perform the selected operation.
+Enter the number corresponding to the operation you want to perform.
 
-Data Storage
+## Data Storage
 
-AddressBook uses contacts.csv to store contact information.
+Contact information is stored in `contacts.csv` using a simple CSV format.
 
-The file follows a simple comma-separated format:
+Example:
 
+```text
 #3
 Dileep,9087654321,dileep@gmail.com
-Swapnika,7789654321,jenny@gmail.com
+Swapnika,7787654321,jenny@gmail.com
 Mary,8907654321,mary@gmail.com
+```
 
 The first line stores the number of contacts, followed by the contact records.
 
-When AddressBook starts, the saved contacts are loaded from the CSV file into memory. When the user selects **Save and Exit**, the current contacts are written back to the file.
+When AddressBook starts, the saved contacts are loaded from `contacts.csv` into memory. When **Save and Exit** is selected, the current contact data is written back to the CSV file.
 
-Author
+## Author
 
-Manubolu Dileepchowdary
+**Dileep**
